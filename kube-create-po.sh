@@ -2,7 +2,7 @@
 #This script is used to create pods on k8 clusters
 
 # directories and scripts
-workDir="/home/zsj/Desktop/kube_yamls"
+workDir=$(pwd)
 podSourcesDownloadScript="pod-sources-download.sh"
 psJobStartScript=""
 workerJobStartScript=""
@@ -19,7 +19,7 @@ port="2222"
 #
 if [ -d $workDir ]; then
     echo "[INFO] The working directory is $workDir"
-    cd workDir #Changing workding directory
+    cd $workDir/sources/kubernetes #Changing workding directory
 else
     echo "[ERRO] Workding directory $workDir error" >2 
 fi
