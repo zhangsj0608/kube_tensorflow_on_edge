@@ -1,7 +1,7 @@
 #! /bin/bash
 sourceZip="drs.zip"
 sourceFile="tensorflow_template_application-master"
-
+echo "[INFO@$HOSTNAME] ############################"
 ## download the source zip
 if ! [ -e $sourceZip  ] 
 then 
@@ -25,5 +25,5 @@ then
     unzip drs.zip 1>> /dev/null
 fi
 
-echo "[INFO] $sourceFile downloaded and extracted successfully"
+echo "[INFO@$HOSTNAME] $sourceFile downloaded and extracted successfully"
 

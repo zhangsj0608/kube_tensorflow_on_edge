@@ -1,0 +1,3 @@
+2018-04-19 10:46:07.996186: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job ps -> {0 -> localhost:2222, 1 -> 10.244.64.10:2222}
+2018-04-19 10:46:07.996366: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job worker -> {0 -> 10.244.64.8:2222, 1 -> 10.244.192.11:2222}
+2018-04-19 10:46:07.998454: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:333] Started server with target: grpc://localhost:2222

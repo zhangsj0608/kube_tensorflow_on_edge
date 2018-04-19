@@ -1,0 +1,79 @@
+2018-04-19 10:38:02.080284: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job ps -> {0 -> 10.244.192.13:2222, 1 -> 10.244.64.10:2222}
+2018-04-19 10:38:02.080605: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> 10.244.192.11:2222}
+2018-04-19 10:38:02.082170: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:333] Started server with target: grpc://localhost:2222
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From dense_classifier.py:179: streaming_auc (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.auc. Note that the order of the labels and predictions arguments has been switched.
+WARNING:tensorflow:From dense_classifier.py:207: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-04-19 10:38:11.359027: I tensorflow/core/distributed_runtime/master_session.cc:1033] Start master session 4a1612651d50b864 with config: 
+Exception in thread QueueRunnerThread-input_producer-input_producer/input_producer_EnqueueMany:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/queue_runner_impl.py", line 268, in _run
+    coord.request_stop(e)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/coordinator.py", line 213, in request_stop
+    six.reraise(*sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/queue_runner_impl.py", line 252, in _run
+    enqueue_callable()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1252, in _single_operation_run
+    self._call_tf_sessionrun(None, {}, [], target_list, None)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1423, in _call_tf_sessionrun
+    status, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/errors_impl.py", line 516, in __exit__
+    c_api.TF_GetCode(self.status.status))
+CancelledError: Step was cancelled by an explicit call to `Session::Close()`.
+
+2018-04-19 10:46:09.545725: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000003f. Possibly, this worker just restarted.
+2018-04-19 10:46:09.555402: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000004e. Possibly, this worker just restarted.
+2018-04-19 10:46:09.559040: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000043. Possibly, this worker just restarted.
+2018-04-19 10:46:09.560573: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000005. Possibly, this worker just restarted.
+2018-04-19 10:46:09.563007: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000003. Possibly, this worker just restarted.
+2018-04-19 10:46:09.564822: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000037. Possibly, this worker just restarted.
+2018-04-19 10:46:09.565592: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000041. Possibly, this worker just restarted.
+2018-04-19 10:46:09.570832: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 00000000000000e1. Possibly, this worker just restarted.
+2018-04-19 10:46:09.573017: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000005. Possibly, this worker just restarted.
+2018-04-19 10:46:09.574428: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000003. Possibly, this worker just restarted.
+2018-04-19 10:46:09.574689: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000144. Possibly, this worker just restarted.
+2018-04-19 10:46:09.577799: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000001. Possibly, this worker just restarted.
+2018-04-19 10:46:09.579324: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000003d. Possibly, this worker just restarted.
+2018-04-19 10:46:09.581722: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000001. Possibly, this worker just restarted.
+2018-04-19 10:46:09.584374: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000003a. Possibly, this worker just restarted.
+2018-04-19 10:46:09.586609: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000040. Possibly, this worker just restarted.
+2018-04-19 10:46:09.588252: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000003f. Possibly, this worker just restarted.
+Step: 1530, loss: 0.0494224950671, accuracy: 0.94921875, auc: 0.961634635925
+Step: 1550, loss: 0.0448761098087, accuracy: 0.9521484375, auc: 0.962320923805
+Step: 1560, loss: 0.040733974427, accuracy: 0.9453125, auc: 0.962207615376
+Step: 1570, loss: 0.0492774322629, accuracy: 0.9423828125, auc: 0.961707234383
+Step: 1590, loss: 0.050607804209, accuracy: 0.9462890625, auc: 0.961867690086
+Step: 1620, loss: 0.0463577918708, accuracy: 0.9482421875, auc: 0.961932301521
+Step: 1630, loss: 0.0443813279271, accuracy: 0.9541015625, auc: 0.962340950966
+Step: 1650, loss: 0.0397746302187, accuracy: 0.9404296875, auc: 0.962804555893
+Step: 1680, loss: 0.045906342566, accuracy: 0.9453125, auc: 0.96332269907
+Step: 1710, loss: 0.0440571419895, accuracy: 0.9501953125, auc: 0.963805913925
+Step: 1730, loss: 0.0494826324284, accuracy: 0.9501953125, auc: 0.964164674282
+Step: 1840, loss: 0.0426078140736, accuracy: 0.94140625, auc: 0.965155541897
+Step: 1870, loss: 0.0374500714242, accuracy: 0.9462890625, auc: 0.965542674065
+Traceback (most recent call last):
+  File "dense_classifier.py", line 241, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 126, in run
+    _sys.exit(main(argv))
+  File "dense_classifier.py", line 221, in main
+    global_step])
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1143, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1324, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1343, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.UnavailableError: Socket closed

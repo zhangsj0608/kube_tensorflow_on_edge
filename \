@@ -95,7 +95,6 @@ do
     # exec to the pods to execute the source codes
     if [[ $pod =~ $ps_pattern ]]
     then
-        continue
         # this is a ps pod, so we start the ps job
         commandStr="cd tensorflow_template_application-master/distributed/ \n
                     nohup python dense_classifier.py \
@@ -107,6 +106,7 @@ do
     else
         if [[ $pod =~ $worker_pattern ]]
         then
+            continue
             # this is a worker pod, so we start the worker job   
             commandStr="cd tensorflow_template_application-master/distributed/ \n
                      nohup python dense_classifier.py \

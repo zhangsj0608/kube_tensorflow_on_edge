@@ -1,0 +1,68 @@
+2018-04-19 10:38:03.008017: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job ps -> {0 -> 10.244.192.13:2222, 1 -> 10.244.64.10:2222}
+2018-04-19 10:38:03.008117: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job worker -> {0 -> 10.244.64.8:2222, 1 -> localhost:2222}
+2018-04-19 10:38:03.009507: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:333] Started server with target: grpc://localhost:2222
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From dense_classifier.py:179: streaming_auc (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.auc. Note that the order of the labels and predictions arguments has been switched.
+WARNING:tensorflow:From dense_classifier.py:207: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-04-19 10:38:12.604799: I tensorflow/core/distributed_runtime/master_session.cc:1033] Start master session 662444de97949aeb with config: 
+2018-04-19 10:42:31.906974: W tensorflow/core/kernels/queue_base.cc:285] _2_shuffle_batch/random_shuffle_queue: Skipping cancelled dequeue attempt with queue not closed
+2018-04-19 10:46:08.915149: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000009. Possibly, this worker just restarted.
+2018-04-19 10:46:08.916024: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000007. Possibly, this worker just restarted.
+2018-04-19 10:46:08.922425: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000072. Possibly, this worker just restarted.
+2018-04-19 10:46:08.927109: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000000b. Possibly, this worker just restarted.
+2018-04-19 10:46:08.927988: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000000d. Possibly, this worker just restarted.
+2018-04-19 10:46:08.936017: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000006b. Possibly, this worker just restarted.
+2018-04-19 10:46:08.936224: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000007. Possibly, this worker just restarted.
+2018-04-19 10:46:08.937344: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 0000000000000009. Possibly, this worker just restarted.
+2018-04-19 10:46:08.937797: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000000d. Possibly, this worker just restarted.
+Step: 1470, loss: 0.0542850382626, accuracy: 0.94140625, auc: 0.958941817284
+Step: 1480, loss: 0.0477071665227, accuracy: 0.953125, auc: 0.961251378059
+Step: 1490, loss: 0.047393951565, accuracy: 0.9453125, auc: 0.960799396038
+Step: 1500, loss: 0.0497613959014, accuracy: 0.9443359375, auc: 0.960611224174
+Step: 1510, loss: 0.0493416637182, accuracy: 0.9453125, auc: 0.960720121861
+Step: 1520, loss: 0.0482435747981, accuracy: 0.9462890625, auc: 0.961013019085
+Step: 1540, loss: 0.0505463778973, accuracy: 0.9501953125, auc: 0.961955606937
+Step: 1580, loss: 0.0454467236996, accuracy: 0.9482421875, auc: 0.961756408215
+Step: 1600, loss: 0.0477244667709, accuracy: 0.9462890625, auc: 0.961757421494
+Step: 1610, loss: 0.0451917760074, accuracy: 0.9453125, auc: 0.96188980341
+Step: 1640, loss: 0.0446451380849, accuracy: 0.9501953125, auc: 0.962657511234
+Step: 1660, loss: 0.0447791963816, accuracy: 0.9453125, auc: 0.962871134281
+Step: 1670, loss: 0.0456830076873, accuracy: 0.9482421875, auc: 0.963086664677
+Step: 1690, loss: 0.0403868667781, accuracy: 0.9423828125, auc: 0.963417947292
+Step: 1700, loss: 0.0450946614146, accuracy: 0.94921875, auc: 0.963609099388
+Step: 1720, loss: 0.037473462522, accuracy: 0.9462890625, auc: 0.963960289955
+Step: 1740, loss: 0.0435173772275, accuracy: 0.94921875, auc: 0.964345991611
+Step: 1750, loss: 0.038448061794, accuracy: 0.9501953125, auc: 0.964567959309
+Step: 1760, loss: 0.0416748225689, accuracy: 0.9423828125, auc: 0.96454012394
+Step: 1770, loss: 0.0439667850733, accuracy: 0.9453125, auc: 0.964590787888
+Step: 1780, loss: 0.038974262774, accuracy: 0.9501953125, auc: 0.964775443077
+Step: 1790, loss: 0.0423772633076, accuracy: 0.94921875, auc: 0.964860022068
+Step: 1800, loss: 0.0422185324132, accuracy: 0.9443359375, auc: 0.964907109737
+Step: 1810, loss: 0.0420783311129, accuracy: 0.9453125, auc: 0.964977443218
+Step: 1820, loss: 0.0479213893414, accuracy: 0.9501953125, auc: 0.965055048466
+Step: 1830, loss: 0.0420210137963, accuracy: 0.9462890625, auc: 0.965168297291
+Step: 1850, loss: 0.049569144845, accuracy: 0.94921875, auc: 0.965266346931
+Step: 1860, loss: 0.0399455726147, accuracy: 0.943359375, auc: 0.965443611145
+Traceback (most recent call last):
+  File "dense_classifier.py", line 241, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 126, in run
+    _sys.exit(main(argv))
+  File "dense_classifier.py", line 221, in main
+2018-04-19 10:46:08.946194: I tensorflow/core/distributed_runtime/master_session.cc:914] DeregisterGraph error: Aborted: Graph handle is not found: 000000000000000b. Possibly, this worker just restarted.
+    global_step])
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1143, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1324, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1343, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.UnavailableError: Socket closed
