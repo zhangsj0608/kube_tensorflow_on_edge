@@ -1,0 +1,224 @@
+2018-04-24 01:28:17.616441: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job ps -> {0 -> 10.244.192.22:2222}
+2018-04-24 01:28:17.616900: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:215] Initialize GrpcChannelCache for job worker -> {0 -> localhost:2222, 1 -> 10.244.192.20:2222}
+2018-04-24 01:28:17.619936: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:333] Started server with target: grpc://localhost:2222
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the retry module or similar alternatives.
+WARNING:tensorflow:From dense_classifier.py:179: streaming_auc (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.auc. Note that the order of the labels and predictions arguments has been switched.
+WARNING:tensorflow:From dense_classifier.py:207: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-04-24 01:28:28.491387: I tensorflow/core/distributed_runtime/master_session.cc:1033] Start master session b421a4292a05b53e with config: 
+Step: 10, loss: 7.07112836838, accuracy: 0.3935546875, auc: 0.503030359745
+Step: 20, loss: 1.50999212265, accuracy: 0.84765625, auc: 0.602224349976
+Step: 50, loss: 0.584499120712, accuracy: 0.9072265625, auc: 0.735707044601
+Step: 90, loss: 0.281283438206, accuracy: 0.9638671875, auc: 0.797883570194
+Step: 120, loss: 0.190580099821, accuracy: 0.9521484375, auc: 0.834547817707
+Step: 140, loss: 0.150935351849, accuracy: 0.9599609375, auc: 0.852038860321
+Step: 180, loss: 0.103568583727, accuracy: 0.955078125, auc: 0.875600397587
+Step: 200, loss: 0.0972709432244, accuracy: 0.9453125, auc: 0.883856296539
+Step: 230, loss: 0.084217518568, accuracy: 0.9560546875, auc: 0.89634847641
+Step: 270, loss: 0.0817996710539, accuracy: 0.955078125, auc: 0.90580034256
+Step: 290, loss: 0.0924801975489, accuracy: 0.958984375, auc: 0.909997701645
+Step: 310, loss: 0.071769297123, accuracy: 0.9501953125, auc: 0.913307487965
+Step: 330, loss: 0.0710864514112, accuracy: 0.95703125, auc: 0.916499316692
+Step: 370, loss: 0.0661605149508, accuracy: 0.9697265625, auc: 0.921796321869
+Step: 390, loss: 0.0654983595014, accuracy: 0.9599609375, auc: 0.924231469631
+Step: 440, loss: 0.0578391961753, accuracy: 0.962890625, auc: 0.930088102818
+Step: 480, loss: 0.0593804977834, accuracy: 0.970703125, auc: 0.933448672295
+Step: 500, loss: 0.0573809631169, accuracy: 0.9609375, auc: 0.934962630272
+Step: 520, loss: 0.0662634670734, accuracy: 0.966796875, auc: 0.936363458633
+Step: 540, loss: 0.0574120804667, accuracy: 0.9658203125, auc: 0.937350213528
+Step: 550, loss: 0.0524508021772, accuracy: 0.9638671875, auc: 0.937925517559
+Step: 580, loss: 0.0622273683548, accuracy: 0.970703125, auc: 0.939711213112
+Step: 610, loss: 0.0569989345968, accuracy: 0.9638671875, auc: 0.941815853119
+Step: 640, loss: 0.0539505071938, accuracy: 0.966796875, auc: 0.94319331646
+Step: 680, loss: 0.0541448220611, accuracy: 0.966796875, auc: 0.944646775723
+Step: 700, loss: 0.0513122864068, accuracy: 0.96875, auc: 0.945415854454
+Step: 720, loss: 0.0503282099962, accuracy: 0.9658203125, auc: 0.946420967579
+Step: 740, loss: 0.0525783263147, accuracy: 0.96875, auc: 0.946996867657
+Step: 770, loss: 0.0496480464935, accuracy: 0.9619140625, auc: 0.947868585587
+Step: 780, loss: 0.0498390197754, accuracy: 0.9716796875, auc: 0.948211669922
+Step: 820, loss: 0.052223443985, accuracy: 0.966796875, auc: 0.949532032013
+Step: 890, loss: 0.0475672408938, accuracy: 0.966796875, auc: 0.951088428497
+Step: 920, loss: 0.0434761494398, accuracy: 0.970703125, auc: 0.951739549637
+Step: 930, loss: 0.0460966899991, accuracy: 0.96484375, auc: 0.951919496059
+Step: 970, loss: 0.0392996482551, accuracy: 0.966796875, auc: 0.952608168125
+Step: 980, loss: 0.0454395115376, accuracy: 0.962890625, auc: 0.952762722969
+Step: 1000, loss: 0.0450690463185, accuracy: 0.966796875, auc: 0.953139722347
+Step: 1020, loss: 0.0462466180325, accuracy: 0.966796875, auc: 0.95358723402
+Step: 1130, loss: 0.0464823171496, accuracy: 0.9677734375, auc: 0.955374181271
+Step: 1220, loss: 0.0470258779824, accuracy: 0.9677734375, auc: 0.956641197205
+Step: 1240, loss: 0.0448053590953, accuracy: 0.96875, auc: 0.956777691841
+Step: 1290, loss: 0.0430526211858, accuracy: 0.96484375, auc: 0.957235634327
+Step: 1300, loss: 0.0434935353696, accuracy: 0.966796875, auc: 0.957343637943
+Step: 1310, loss: 0.0479698181152, accuracy: 0.9599609375, auc: 0.957458972931
+Step: 1340, loss: 0.0425676964223, accuracy: 0.966796875, auc: 0.957696259022
+Step: 1410, loss: 0.0400579124689, accuracy: 0.966796875, auc: 0.958317756653
+Step: 1460, loss: 0.0429228134453, accuracy: 0.9609375, auc: 0.958617568016
+Step: 1470, loss: 0.0428996011615, accuracy: 0.9677734375, auc: 0.958684802055
+Step: 1480, loss: 0.0460511222482, accuracy: 0.9677734375, auc: 0.95877879858
+Step: 1610, loss: 0.039737071842, accuracy: 0.9677734375, auc: 0.959573209286
+Step: 1630, loss: 0.0398736447096, accuracy: 0.9609375, auc: 0.959637284279
+Step: 1700, loss: 0.0394774451852, accuracy: 0.9609375, auc: 0.959981262684
+Step: 1710, loss: 0.0335845164955, accuracy: 0.9697265625, auc: 0.960046231747
+Step: 1760, loss: 0.0400439053774, accuracy: 0.96875, auc: 0.960286080837
+Step: 1780, loss: 0.0371168330312, accuracy: 0.9677734375, auc: 0.960359215736
+Step: 1840, loss: 0.036701887846, accuracy: 0.9609375, auc: 0.960614383221
+Step: 1860, loss: 0.0390965119004, accuracy: 0.966796875, auc: 0.960679113865
+Step: 1870, loss: 0.0373524352908, accuracy: 0.9677734375, auc: 0.960740625858
+Step: 1910, loss: 0.0360925644636, accuracy: 0.966796875, auc: 0.960819005966
+Step: 1930, loss: 0.0326073020697, accuracy: 0.9677734375, auc: 0.960900425911
+Step: 1940, loss: 0.039107196033, accuracy: 0.962890625, auc: 0.960917413235
+Step: 1950, loss: 0.0346787162125, accuracy: 0.955078125, auc: 0.960940241814
+Step: 1960, loss: 0.0360613018274, accuracy: 0.9599609375, auc: 0.960964560509
+Step: 1970, loss: 0.0377004742622, accuracy: 0.9658203125, auc: 0.961009681225
+Step: 1980, loss: 0.0377934500575, accuracy: 0.966796875, auc: 0.961082220078
+Step: 2000, loss: 0.0354421138763, accuracy: 0.9638671875, auc: 0.961134850979
+Step: 2010, loss: 0.0360352359712, accuracy: 0.95703125, auc: 0.961142539978
+Step: 2020, loss: 0.0396638773382, accuracy: 0.9609375, auc: 0.961179614067
+Step: 2030, loss: 0.0357750579715, accuracy: 0.9580078125, auc: 0.961192369461
+Step: 2040, loss: 0.039044700563, accuracy: 0.9677734375, auc: 0.961209416389
+Step: 2050, loss: 0.0368416085839, accuracy: 0.962890625, auc: 0.961253166199
+Step: 2060, loss: 0.0384292155504, accuracy: 0.9677734375, auc: 0.961269140244
+Step: 2070, loss: 0.0436287298799, accuracy: 0.96484375, auc: 0.961307883263
+Step: 2090, loss: 0.0348231680691, accuracy: 0.9609375, auc: 0.961401104927
+Step: 2100, loss: 0.0314573012292, accuracy: 0.96484375, auc: 0.961407780647
+Step: 2110, loss: 0.0360549390316, accuracy: 0.962890625, auc: 0.961449682713
+Step: 2120, loss: 0.0347396507859, accuracy: 0.9677734375, auc: 0.961474895477
+Step: 2130, loss: 0.0345502756536, accuracy: 0.9599609375, auc: 0.961493194103
+Step: 2140, loss: 0.035240419209, accuracy: 0.962890625, auc: 0.96152472496
+Step: 2150, loss: 0.0377710498869, accuracy: 0.9609375, auc: 0.961561083794
+Step: 2160, loss: 0.0384244993329, accuracy: 0.9658203125, auc: 0.961586654186
+Step: 2170, loss: 0.0351330600679, accuracy: 0.9599609375, auc: 0.961618065834
+Step: 2180, loss: 0.0378687232733, accuracy: 0.9677734375, auc: 0.961657166481
+Step: 2190, loss: 0.0380787998438, accuracy: 0.9609375, auc: 0.961685657501
+Step: 2200, loss: 0.0385317057371, accuracy: 0.9580078125, auc: 0.961686611176
+Step: 2210, loss: 0.0352906174958, accuracy: 0.96875, auc: 0.961701691151
+Step: 2220, loss: 0.0336971394718, accuracy: 0.9609375, auc: 0.961737751961
+Step: 2230, loss: 0.0342007428408, accuracy: 0.9560546875, auc: 0.961736679077
+Step: 2240, loss: 0.0367500409484, accuracy: 0.96875, auc: 0.961766600609
+Step: 2250, loss: 0.0376830622554, accuracy: 0.9619140625, auc: 0.961796045303
+Step: 2260, loss: 0.0330363325775, accuracy: 0.962890625, auc: 0.961833059788
+Step: 2270, loss: 0.036565490067, accuracy: 0.95703125, auc: 0.961841166019
+Step: 2280, loss: 0.03609957546, accuracy: 0.9697265625, auc: 0.961849927902
+Step: 2290, loss: 0.0338006429374, accuracy: 0.962890625, auc: 0.961865186691
+Step: 2300, loss: 0.0337152704597, accuracy: 0.96484375, auc: 0.961899638176
+Step: 2310, loss: 0.0291765034199, accuracy: 0.9638671875, auc: 0.961907565594
+Step: 2320, loss: 0.0337757319212, accuracy: 0.962890625, auc: 0.961940765381
+Step: 2330, loss: 0.0298245493323, accuracy: 0.9580078125, auc: 0.96195089817
+Step: 2340, loss: 0.0332567766309, accuracy: 0.962890625, auc: 0.961977779865
+Step: 2360, loss: 0.0329651758075, accuracy: 0.966796875, auc: 0.962046205997
+Step: 2370, loss: 0.0332056358457, accuracy: 0.966796875, auc: 0.962051868439
+Step: 2390, loss: 0.0336677506566, accuracy: 0.9580078125, auc: 0.962096095085
+Step: 2400, loss: 0.033992998302, accuracy: 0.958984375, auc: 0.962110280991
+Step: 2410, loss: 0.0310468189418, accuracy: 0.9638671875, auc: 0.962149202824
+Step: 2420, loss: 0.0363930128515, accuracy: 0.9580078125, auc: 0.96216148138
+Step: 2430, loss: 0.0328328683972, accuracy: 0.9599609375, auc: 0.962175250053
+Step: 2440, loss: 0.0339318960905, accuracy: 0.966796875, auc: 0.962189733982
+Step: 2450, loss: 0.0310511942953, accuracy: 0.9599609375, auc: 0.96220266819
+Step: 2460, loss: 0.0352574214339, accuracy: 0.958984375, auc: 0.962218999863
+Step: 2470, loss: 0.0338109061122, accuracy: 0.96875, auc: 0.962241351604
+Step: 2480, loss: 0.0340146571398, accuracy: 0.9599609375, auc: 0.96227222681
+Step: 2490, loss: 0.0363777279854, accuracy: 0.9658203125, auc: 0.962280094624
+Step: 2500, loss: 0.0309544876218, accuracy: 0.9638671875, auc: 0.962320387363
+Step: 2510, loss: 0.0322512052953, accuracy: 0.9658203125, auc: 0.962330877781
+Step: 2520, loss: 0.030019748956, accuracy: 0.9541015625, auc: 0.962327182293
+Step: 2540, loss: 0.0316901728511, accuracy: 0.9609375, auc: 0.962379515171
+Step: 2550, loss: 0.0335161313415, accuracy: 0.9619140625, auc: 0.962398469448
+Step: 2560, loss: 0.0315749235451, accuracy: 0.9658203125, auc: 0.962403833866
+Step: 2570, loss: 0.0349186584353, accuracy: 0.9658203125, auc: 0.962411701679
+Step: 2580, loss: 0.0367963947356, accuracy: 0.96875, auc: 0.962443351746
+Step: 2590, loss: 0.0329540036619, accuracy: 0.966796875, auc: 0.962485432625
+Step: 2610, loss: 0.0353632457554, accuracy: 0.958984375, auc: 0.962511122227
+Step: 2630, loss: 0.0345262512565, accuracy: 0.958984375, auc: 0.962544500828
+Step: 2640, loss: 0.0298627726734, accuracy: 0.95703125, auc: 0.962548613548
+Step: 2650, loss: 0.0310438200831, accuracy: 0.9599609375, auc: 0.962565600872
+Step: 2660, loss: 0.0344317853451, accuracy: 0.9716796875, auc: 0.962599337101
+Step: 2670, loss: 0.0321542806923, accuracy: 0.9599609375, auc: 0.962603628635
+Step: 2680, loss: 0.0315668657422, accuracy: 0.96484375, auc: 0.96261036396
+Step: 2690, loss: 0.0333445668221, accuracy: 0.9638671875, auc: 0.962632536888
+Step: 2700, loss: 0.0316539928317, accuracy: 0.9716796875, auc: 0.962679505348
+Step: 2730, loss: 0.0321869552135, accuracy: 0.9609375, auc: 0.962733328342
+Step: 2740, loss: 0.0288519263268, accuracy: 0.958984375, auc: 0.962743878365
+Step: 2750, loss: 0.029149858281, accuracy: 0.9580078125, auc: 0.962760329247
+Step: 2760, loss: 0.0304843261838, accuracy: 0.9697265625, auc: 0.962779700756
+Step: 2770, loss: 0.0299653168768, accuracy: 0.96484375, auc: 0.962795972824
+Step: 2780, loss: 0.0347268953919, accuracy: 0.958984375, auc: 0.962793111801
+Step: 2790, loss: 0.0308126658201, accuracy: 0.9677734375, auc: 0.962818801403
+Step: 2830, loss: 0.0340788327157, accuracy: 0.9638671875, auc: 0.962877213955
+Step: 2840, loss: 0.0312162190676, accuracy: 0.958984375, auc: 0.962892770767
+Step: 2860, loss: 0.0338238701224, accuracy: 0.9638671875, auc: 0.962907552719
+Step: 2880, loss: 0.032851472497, accuracy: 0.9580078125, auc: 0.96293592453
+Step: 2900, loss: 0.0322860479355, accuracy: 0.9677734375, auc: 0.962988615036
+Step: 2920, loss: 0.0300757624209, accuracy: 0.9658203125, auc: 0.963018834591
+Step: 2960, loss: 0.0309258084744, accuracy: 0.958984375, auc: 0.963054895401
+Step: 3030, loss: 0.0314247086644, accuracy: 0.9677734375, auc: 0.963155329227
+Step: 3060, loss: 0.0299640633166, accuracy: 0.9609375, auc: 0.963215112686
+Step: 3110, loss: 0.03287948668, accuracy: 0.958984375, auc: 0.9632640481
+Step: 3140, loss: 0.0326681882143, accuracy: 0.962890625, auc: 0.963306605816
+Step: 3200, loss: 0.0286713838577, accuracy: 0.9609375, auc: 0.963397979736
+Step: 3250, loss: 0.0307567864656, accuracy: 0.96875, auc: 0.96344769001
+Step: 3280, loss: 0.0288999937475, accuracy: 0.96484375, auc: 0.963507115841
+Step: 3300, loss: 0.033250682056, accuracy: 0.9609375, auc: 0.963523864746
+Step: 3330, loss: 0.0283680018038, accuracy: 0.9677734375, auc: 0.963553249836
+Step: 3340, loss: 0.0292074624449, accuracy: 0.95703125, auc: 0.963566124439
+Step: 3370, loss: 0.0309881046414, accuracy: 0.9619140625, auc: 0.963606238365
+Step: 3410, loss: 0.0304434373975, accuracy: 0.9697265625, auc: 0.963664770126
+Step: 3440, loss: 0.0322628542781, accuracy: 0.9677734375, auc: 0.963701367378
+Step: 3450, loss: 0.0286716856062, accuracy: 0.9677734375, auc: 0.963709175587
+Step: 3470, loss: 0.0261985473335, accuracy: 0.96386712018-04-24 02:22:38.256423: E tensorflow/core/distributed_runtime/master_session.cc:1670] Cleanup partition error: Unavailable: OS Error
+2018-04-24 02:22:38.342791: E tensorflow/core/distributed_runtime/master_session.cc:1670] Cleanup partition error: Unavailable: OS Error
+2018-04-24 02:22:38.343793: E tensorflow/core/distributed_runtime/master_session.cc:1670] Cleanup partition error: Unavailable: OS Error
+875, auc: 0.963751912117
+Step: 3480, loss: 0.0307144485414, accuracy: 0.96875, auc: 0.963766753674
+Step: 3500, loss: 0.0254457499832, accuracy: 0.966796875, auc: 0.963776171207
+Step: 3510, loss: 0.0291595291346, accuracy: 0.96484375, auc: 0.96377658844
+Step: 3520, loss: 0.0299119316041, accuracy: 0.966796875, auc: 0.963791489601
+Step: 3530, loss: 0.0285580195487, accuracy: 0.966796875, auc: 0.963801920414
+Step: 3540, loss: 0.0285307206213, accuracy: 0.9677734375, auc: 0.963815391064
+Step: 3550, loss: 0.0297963805497, accuracy: 0.9638671875, auc: 0.963815271854
+Step: 3570, loss: 0.0282932724804, accuracy: 0.9677734375, auc: 0.963840544224
+Step: 3580, loss: 0.030709143728, accuracy: 0.96875, auc: 0.963851988316
+Step: 3600, loss: 0.0293690823019, accuracy: 0.962890625, auc: 0.963887453079
+Step: 3610, loss: 0.0282297544181, accuracy: 0.966796875, auc: 0.963898539543
+Step: 3620, loss: 0.0296022370458, accuracy: 0.96484375, auc: 0.963902115822
+Step: 3630, loss: 0.028745405376, accuracy: 0.9677734375, auc: 0.963918030262
+Step: 3640, loss: 0.0293132532388, accuracy: 0.958984375, auc: 0.963919758797
+Step: 3650, loss: 0.0280601549894, accuracy: 0.96875, auc: 0.963930606842
+Step: 3660, loss: 0.0316662974656, accuracy: 0.9697265625, auc: 0.963958501816
+Traceback (most recent call last):
+  File "dense_classifier.py", line 241, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 126, in run
+    _sys.exit(main(argv))
+  File "dense_classifier.py", line 237, in main
+    coord.join(threads)
+  File "/usr/lib/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/supervisor.py", line 1000, in managed_session
+    self.stop(close_summary_writer=close_summary_writer)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/supervisor.py", line 828, in stop
+    ignore_live_threads=ignore_live_threads)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/coordinator.py", line 389, in join
+    six.reraise(*self._exc_info_to_raise)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/coordinator.py", line 297, in stop_on_exception
+    yield
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/coordinator.py", line 495, in run
+    self.run_loop()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/supervisor.py", line 1067, in run_loop
+    current_step = training_util.global_step(self._sess, self._step_counter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/training_util.py", line 69, in global_step
+    return int(sess.run(global_step_tensor))
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1143, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1324, in _do_run
+    run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1343, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.UnavailableError: OS Error
+	 [[Node: global_step_S21 = _Recv[_start_time=0, client_terminated=false, recv_device="/job:worker/replica:0/task:0/device:CPU:0", send_device="/job:ps/replica:0/task:0/device:CPU:0", send_device_incarnation=648511986186943984, tensor_name="edge_4_global_step", tensor_type=DT_INT32, _device="/job:worker/replica:0/task:0/device:CPU:0"]()]]
