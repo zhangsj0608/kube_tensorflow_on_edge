@@ -20,7 +20,6 @@ port="2222"
 echo "#######################################"
 if [ -d $baseDir ]; then
     echo "[INFO] The working directory is $baseDir"
-    cd $baseDir/sources/kubernetes #Changing workding directory
 else
     echo "[ERRO] Workding directory $baseDir error" >2 
 fi
@@ -29,6 +28,7 @@ fi
 # extract all ps-, worker- yaml files, and create the 
 # pods with kubectl ...
 yamlFiles=""
+cd ${baseDir}/sources/kubernetes #Changing workding directory
 for file in $(ls)
 do  
     # find the ps-,worker-,ps-svc-,worker-svc.yaml
@@ -39,29 +39,59 @@ do
 done 
 echo "[INFO] the yamlFiles include: $yamlFiles"
 
+
 # here we wait seconds for the initialization of pods and services,
 # and then, get the information of pods and services and ensure
 # them working properly
 # 
-pod_IP_Status=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow/{
+started="false"
+while [ ${started} == "false" ]
+do 
+    sleep 1
+    pod_IP_Status=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow/{
     
-    print $1":"$6":"$3
+        print $1":"$6":"$3
      
-}')
-ps_IPs=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow-ps/ {
+    }')
+    for status_string in ${pod_IP_Status} 
+    do
+        echo "${status_string}"
+        if ! [[ ${status_string} =~ Running$ ]]
+        then
+            echo "status_string=${status_string}"
+            started="false"       
+            break
+        fi
+        started="true"
+    done 
+    echo ${started}
+done
+
+ps_IPs_=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow-ps/ {
 
     print $6":"podPort
 
 }' podPort=$port)
-worker_IPs=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow-worker/{
+worker_IPs_=$(kubectl get pods -o wide | gawk '$1 ~ /^tensorflow-worker/{
 
     print $6":"podPort
 
 }' podPort=$port)
 
 ## formulate the ps_IPs, and worker_IPs, replace '/n' to ','
-ps_IPs=$(echo ${ps_IPs} | sed -n 's/ /,/g p')
-worker_IPs=$(echo ${worker_IPs} | sed -n 's/ /,/g p')
+ps_IPs=$(echo ${ps_IPs_} | sed -n 's/ /,/g p')
+worker_IPs=$(echo ${worker_IPs_} | sed -n 's/ /,/g p')
+
+if [ -z ${ps_IPs} ]
+then 
+    ps_IPs=${ps_IPs_}
+fi
+
+if [ -z ${worker_IPs} ]
+then 
+    worker_IPs=${worker_IPs_}
+fi
+
 
 echo "#######################################"
 echo -e "[INFO] Tensorflow pods information: \n$pod_IP_Status"
@@ -95,7 +125,6 @@ do
     # exec to the pods to execute the source codes
     if [[ $pod =~ $ps_pattern ]]
     then
-        continue
         # this is a ps pod, so we start the ps job
         commandStr="cd tensorflow_template_application-master/distributed/ \n
                     nohup python dense_classifier.py \
@@ -105,6 +134,7 @@ do
         echo -e $commandStr | kubectl exec -i $pod -- /bin/bash -s &>logs/log.${pod} &
         ps_index=$[ $ps_index + 1 ]
     else
+#        continue
         if [[ $pod =~ $worker_pattern ]]
         then
             # this is a worker pod, so we start the worker job   

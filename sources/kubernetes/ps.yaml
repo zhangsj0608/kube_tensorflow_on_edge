@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: tensorflow-ps-rc
 spec:
-  replicas: 2
+  replicas: 1 
   selector:
     name: tensorflow-ps
   template:
