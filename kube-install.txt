@@ -1,0 +1,42 @@
+﻿docker 安装：
+dpkg -r docker-ce
+apt-cache madison docker-ce
+apt-get install docker-ce=17.03.0~ce-0~ubuntu-xenial
+
+添加节点时的删除三连：
+rm /etc/kubernetes/pki/ca.crt
+rm /etc/kubernetes/kubelet.conf
+rm -rf /etc/kubernetes/manifests
+lsof -i :10250
+
+
+集群重启三连：
+sudo cp /etc/kubernetes/admin.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf
+
+kubernetes找不到服务器 & pod地址相同的问题：
+
+安装前需要如下操作：
+vi /etc/ufw/sysctl.conf
+
+net/bridge/bridge-nf-call-ip6tables = 1
+net/bridge/bridge-nf-call-iptables = 1
+net/bridge/bridge-nf-call-arptables = 1
+
+apt-get install ebtables ethtool
+
+在init前需要如下操作：
+sysctl net.ipv4.conf.all.forwarding=1
+iptables -P FORWARD ACCEPT
+
+systemctl stop kubelet
+systemctl stop docker
+iptables --flush
+iptables -tnat --flush
+systemctl start kubelet
+systemctl start docker
+
+重要目录：
+/etc/kubernetes/manifests/kube-apiserver.yaml
+/etc/systemd/system/kubelet.service.d/10-kubeadm.conf
